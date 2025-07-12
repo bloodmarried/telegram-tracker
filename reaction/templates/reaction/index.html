@@ -1,0 +1,65 @@
+{% extends "reaction/layout.html" %}
+{% block content %}
+{% load static %}
+
+<header>
+    <div class="container">
+        <div class="header">
+            
+            <form action="" method="get">
+                <input type="text" name="search-input" id="test" placeholder="TELEGRAM ID">
+            </form>
+            {% if user.is_authenticated %}
+                <a href="{% url 'user' user.reviews.user_id %}">
+                    <img src="{{ user.reviews.picture }}" alt="" id="profile-picture">
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="child">
+        <div class="avatar">
+            <a href="{{ profile.picture }}">
+                <img src="{{ profile.picture }}" alt="лол">
+            </a>
+            {% if user.is_authenticated and user.reviews.user_id == profile.user_id %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" id = "logout">Выйти</a>
+            </form>
+            {% endif %}
+            </div>
+        <div class="body">
+            <div class="body-element">
+                <div>
+                    <b class="b-color">ПРОСМОТРОВ</b>
+                </div>
+                    <span> {{profile.viewers}} </span>
+                
+            </div>
+            <div class="body-element">
+            <div>
+                    <b class="b-color">НА САЙТЕ С</b>
+                </div>
+                <span>{{ profile.date }}</span>
+            </div>
+            <div class="body-element">
+                <div>
+                    <b class="b-color">TELEGRAM ID</b>
+                </div>
+                <span>{{ profile.user_id }}</span>
+            </div>
+            <div class="body-element">
+                <div>
+                    <b class="b-color">TELEGRAM NAME</b>
+                </div>
+                <a href="https://t.me/{{ profile.username }}" class="url-profile">{{ profile.username }}</a>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

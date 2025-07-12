@@ -1,0 +1,9 @@
+{% extends "calculator/layout.html" %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <p>{{ price }}</p>
+    <input type="number" name="TON" id="test", placeholder="Введите количество TON" class="form">
+    <button type="submit">Конвертировать</button>
+</form>
+{% endblock %}

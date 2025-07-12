@@ -1,0 +1,139 @@
+:root {
+    --background: 210 19% 13%;
+    --foreground: 210 40% 98%;
+    --card: 210 22% 18%;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+div {
+  margin-bottom: 5px;
+}
+
+.conainer {
+    margin: 0 auto;
+}
+
+
+#test {
+    border: none;
+    border-radius: 5px;
+    background-color: #212831;
+}
+
+input {
+    outline: none;
+    caret-color: white;
+    color: hsl(var(--foreground));
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: hsl(var(--card));
+    width: 400px;
+    height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.child {
+    background-color: hsl(var(--card));
+    display: flex;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#profile-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+#logout {
+    margin-top: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color:#0098EA;
+    color: hsl(var(--foreground));
+    transition: transform 0.3s ease;
+}
+
+#logout:hover {
+    transform: scale(1.1);
+}
+
+.avatar {
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+    margin-right: 20px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.body {
+    float: left;
+    width: 80%;
+    height: 100%;
+    
+}
+
+img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+.url-profile {
+    text-decoration-line: none;
+    color: hsl(var(--foreground));
+    background-color: #0098EA;
+    border-radius: 20px;
+    padding: 5px 15px;
+    right: 10px;
+    position: relative;
+    bottom: -5px;
+    right: -5px;
+}
+
+.url-profile:hover {
+    background-color: #038DD8;
+}
+
+.body-element {
+    
+    margin-bottom: 10px;
+}
+
+.b-color {
+    color: #038DD8;
+}
